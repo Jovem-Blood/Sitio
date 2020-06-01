@@ -25,7 +25,7 @@
      </style>
 </head>
 <body>
-  <header class="">
+  <header class="" >
     <ul class="nav justify-content-center bg-dark align-items-center" style="height:50px">
       <li class="nav-item">
         <a class="nav-link active text-light" href="index.php">Home</a>
@@ -41,7 +41,7 @@
 
 <div class="content">
 
-<h1 class="text-center text-uppercase" style='font-weight: 700;'><?php echo $_GET['manga']; ?></h1>
+<h1 class="text-center text-uppercase" style='font-weight: 700;'><?php echo str_replace('-',' ',$_GET['manga']); ?></h1>
 
 <div class="">
 
@@ -60,7 +60,7 @@ $cap_max = $_GET['manga'];
 $manga = $_GET['manga'];
 $cap_max = get_cap($manga);
 
-for($c =170; $c<=$cap_max; $c++){
+for($c =1; $c<=$cap_max; $c++){
   echo "<a href='reader.php?cap=$c&manga=$manga' style='color:#3170c4;font-weight: 700;'>Capítulo #$c</a> <br>";
 }
 
