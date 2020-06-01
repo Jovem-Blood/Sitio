@@ -20,7 +20,7 @@
           <a class="nav-link text-light" href="drop.html">Sobre</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-light" href="drop.html">Gêneros</a>
+          <a class="nav-link text-light" href="#">Gêneros</a>
         </li>
       </ul>
     </header>
