@@ -1,4 +1,4 @@
-<?php
+<?php // arquivo principal de funções do Sitio
 function reader($manga, $cap){
 
     $cod = file_get_contents("https://yesmangas1.com/manga/$manga/$cap#1");

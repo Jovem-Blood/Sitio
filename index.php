@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> <!--é bem auto explicativo...-->
 <html lang="pt">
 <head>
 
@@ -13,13 +13,20 @@
 </head>
 <body>
     <header class="head">
-      <nav >
-        <ul class="list-unstyled">
-          <li><a class="ahead" href="index.php">Home</a></li>
-          <li><a class="ahead" href="drop.html">Top</a></li>
-          <li><a class="ahead" href="drop.html">Gêneros</a></li>
-        </ul>
-      </nav>
+      <ul class="nav justify-content-center">
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Active</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        </li>
+      </ul>
     </header>
         <h1>Bem vindo a Yong_mangás XD</h1>
 
