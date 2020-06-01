@@ -1,0 +1,46 @@
+<div class='smanga' style='min-height: 220px;'>
+            <a href='#'>
+                <img src='https://unionleitor.top/assets/uploads/mangas/8ed44721.jpg' class='thumb' style='width: 100px; height: 150px;'></a>
+            <br>
+            <span style='font-size: 16px'>
+                <a href='#' class='titulo'>
+                    Darwin's Game</a>
+            </span>
+</div>
+
+
+/* $num = 1;
+ do{
+ do{
+ $path = "https://yesmangas1.com/manga/$manga/$num";
+ $path_headers = @get_headers($path);
+ $num +=1;
+ echo "$num<br>";
+
+ }while($path_headers[0] == 'HTTP/1.1 301 Moved Permanently');
+
+
+ if ($path_headers[0] == 'HTTP/1.1 301 Moved Permanently' || $path_headers[0] == 'HTTP/1.1 404 Page Not Found') {
+
+     $error = true;
+ } else {
+     $error = false;
+     //        echo "<img class='page' style='max-width: 800px;' alt='página' src='$path'>";
+     $num++;
+ }
+ }while($error==false);*/
+
+
+
+
+
+ $l = file_get_contents("https://yesmangas1.com/manga/$manga");
+ $ex = explode(' leitura</h2>', $l);
+ $ex1=explode('</a>',$ex[1]);
+ $ex2=str_replace('<a class="button" href="https://yesmangas1.com/manga/darwins-game-ym34755/', '',$ex1[0]);
+ $ex3=explode('" title',$ex2);
+ $fex=str_replace('"','',$ex3[0]);
+ $ffex=str_replace('
+                                         ','',$fex);
+ $fffex= settype($ffex, "object");
+ return($ffex);
