@@ -4,88 +4,72 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Sitio</title>
-    <link rel="stylesheet" href="style.css" type="text/css">
-    <?php include('functions.php');
-    $manga = $_GET['manga'];
-     ?>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+      <?php
+      include('functions.php');
+      include('linkgen.php');
+      $manga = $_GET['manga'];
+
+    ?>
+
      <style media="screen">
        .desc{
          list-style-type: none;
-         background-color: white;
+         background-color: #e5e5e5;
          border-radius: 5px;
          padding: 5px;
          width: 400px;
          height: fit-content;
-         margin: 40px;
+         margin-left: 40px;
        }
      </style>
 </head>
 <body>
-<header class="head">
-
-
-
-<nav style="text-decoration: none;">
-  <ul>
-
-    <li><a class="ahead" href="index.php">Home</a></li>
-    <li><a class="ahead" href="drop.html">Top</a></li>
-    <li><a class="ahead" href="drop.html">Gêneros</a></li>
-
-  </ul>
-</nav>
-</header>
+  <header class="">
+    <ul class="nav justify-content-center bg-dark align-items-center" style="height:50px">
+      <li class="nav-item">
+        <a class="nav-link active text-light" href="index.php">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-light" href="drop.html">Top</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-light" href="drop.html">Gêneros</a>
+      </li>
+    </ul>
+  </header>
 
 <div class="content">
 
+<h1 class="text-center text-uppercase" style='font-weight: 700;'><?php echo $_GET['manga']; ?></h1>
 
-<h1><?php echo $_GET['manga']; ?></h1>
-<div class="master">
+<div class="">
 
+  <div class="desc w-25 p-3 ">
+    <?php echo get_things($manga);?>
+  </div>
 
-<div class="desc">
-  <?php echo get_things($manga);?>
 </div>
-</div>
-<span class="topics">Capítulos#</span>
 
-<div class="caps">
+<h2 class="w-25 p-3"  style='font-weight: 700;margin-left: 40px;'>Capítulos#</h2>
 
+<div class=" desc w-25 p-3 ">
 
 <?php
 $cap_max = $_GET['manga'];
 $manga = $_GET['manga'];
-/*switch ($cap_max) {
-  case 'beastars':
-    $cap_max=146;
-    break;
-  case 'kimetsu-no-yaiba':
-    $cap_max=204;
-    break;
-  case 'perfect-half':
-    $cap_max=102;
-    break;
-  case 'darwins-game':
-    $cap_max=84;
-    break;
-  default:
-    $cap_max=0;
-    break;
-}*/
-
-//echo (get_cap($manga))
-
-
 $cap_max = get_cap($manga);
 
-for($c =1; $c<=$cap_max; $c++){
-  echo "<a href='reader.php?cap=$c&manga=$manga' class='lcap'>Capítulo #$c</a> <br>";
+for($c =170; $c<=$cap_max; $c++){
+  echo "<a href='reader.php?cap=$c&manga=$manga' style='color:#3170c4;font-weight: 700;'>Capítulo #$c</a> <br>";
 }
 
  ?>
-</div>
+
+    </div>
 
 </div>
+
 </body>
 
 </html>
