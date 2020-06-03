@@ -22,7 +22,7 @@
         <a class="nav-link active text-light" href="index.php">Home</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link text-light" href="drop.html">Top</a>
+        <a class="nav-link text-light" href="drop.html">Sobre</a>
       </li>
       <li class="nav-item">
         <a class="nav-link text-light" href="#">Gêneros</a>

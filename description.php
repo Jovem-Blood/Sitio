@@ -4,12 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Sitio</title>
+    <script src="script.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
       <?php
       include('functions.php');
       include('linkgen.php');
-      $manga = $_GET['manga'];
-
+      if(!$_GET){
+        $manga = "beastars";
+      }else {
+        $manga = $_GET["manga"];
+      }
     ?>
 
      <style media="screen">
@@ -24,24 +28,27 @@
        }
      </style>
 </head>
-<body>
+<body class="bb">
   <header class="" >
-    <ul class="nav justify-content-center bg-dark align-items-center" style="height:50px">
+    <ul class="nav justify-content-center bg-dark align-items-center w-100" style="height:50px; position:fixed; top:0;">
       <li class="nav-item">
         <a class="nav-link active text-light" href="index.php">Home</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link text-light" href="drop.html">Top</a>
+        <a class="nav-link text-light" href="drop.html">Sobre</a>
       </li>
       <li class="nav-item">
         <a class="nav-link text-light" href="#">Gêneros</a>
+      </li>
+      <li class="nav-link " style="position:absolute; left:90%;">
+        <input class="text-light" type="button" name="change" value="Dark Mode" style="background:none; border:0;" onclick="change()">
       </li>
     </ul>
   </header>
 
 <div class="content">
 
-<h1 class="text-center text-uppercase" style='font-weight: 700;margin-top:2%;'><?php echo str_replace('-',' ',$_GET['manga']); ?></h1>
+<h1 class="text-center text-uppercase" style='font-weight: 700;margin-top:5%;'><?php echo str_replace('-',' ',$manga); ?></h1>
 
 
 <div class="" style="margin: 1%;">
@@ -58,8 +65,6 @@
 <div class=" desc w-25 p-3" style="margin-left:1%;">
 
 <?php
-$cap_max = $_GET['manga'];
-$manga = $_GET['manga'];
 $cap_max = get_cap($manga);
 
 for($c =1; $c<=$cap_max; $c++){
