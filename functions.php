@@ -25,17 +25,4 @@ function get_things($manga){
     return $ex2[0];
 }
 
-function soma(){
-      $p = func_get_args();   //pega os valores de cada arg da função, transformando a variável em um array
-      $tot = func_num_args(); //pega o número de arg da função ex: (4, 2, 5, 6), a $tot retornaria 3 que é o número de indices
-      $s = 0; //valor inicial de soma
-      for($i = 0; $i<$tot; $i++){ // $i será o número do indice que $p irá procurar, começando com 0 e indo até onde o valor de $tot for
-          $s += $p[$i]; //$p[$i] pega o valor do que está no indice $i
-
-      }
-      return $s; //jogando resultado da função para a variável $s
-  }
-   $res = soma( 1, 4, 5);
-   return $res;
-
  ?>
