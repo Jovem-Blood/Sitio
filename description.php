@@ -1,6 +1,7 @@
 <?php
 require('view/templates/header.php');
 require('functions.php');
+require('linkgen.php');
 if (!$_GET) {
   $manga = "beastars";
 } else {
@@ -35,7 +36,7 @@ if (!$_GET) {
     <h2 class="w-25 p-3" style='font-weight: 700;margin-left: 40px;'>Capítulos#</h2>
   </div>
 
-  <div class=" desc w-25 p-3" style="margin-left:1%;">
+  <div class=" desc w-25 p-3" style="margin-left:1%; overflow: scroll;max-height: 50vh;">
 
     <?php
     $cap_max = get_cap($manga);
@@ -50,4 +51,4 @@ if (!$_GET) {
 
 </div>
 
-<?= require('view/templates/footer.php'); ?>
+<?php require('view/templates/footer.php'); ?>

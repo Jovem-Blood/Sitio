@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <style>
       img{
-        width: 800px;
+        max-width: 1200px;
       }
     </style>
     <?php
@@ -42,12 +42,17 @@
     echo "<a class='btn btn-dark' href='./reader.php?cap=$ncap&manga=$manga'>Próximo</a>";
       ?>
       </div>
-    <div class="d-flex justify-content-center">
+    <div class="d-flex justify-content-center" style="flex-direction: column;">
       <?php
       include('functions.php');
+      $sources = reader($manga,$cap);
 
-      echo "<div style='max-width: 800px;'>".reader($manga, $cap).";</div>";
+      foreach ($sources as $src){
+          echo"<img alt=$src'><br>";
+      }
 
+
+        //echo "<div style='max-width: 800px;'>".reader($manga, $cap).";</div>";
        ?>
     </div>
   </section>
