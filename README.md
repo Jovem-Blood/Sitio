@@ -25,7 +25,7 @@ Bom, agradecimento ao tédio por ter me dado essa ideia genial, pois um dia o t�
 
 ### O que eu achei legal do PHP
 
-O PHP além de conseguir pegar o conteúdo de outra página, também me permite manipular esse conteúdo para ser o que eu queira. Isso é uma função e ela se chama `file_get_contents()`. Essa função retorna o código fonte da página em uma variável, onde você consegue achar o que deseja.<br><br>
+O PHP além de conseguir pegar o conteúdo de outra página, também me permite manipular esse conteúdo para poder ser o que eu queira. Isso é uma função e ela se chama `file_get_contents()`. Essa função retorna o código fonte da página em uma variável, onde você consegue achar o que deseja.<br><br>
 Depois disso é necessário utilizar algo para separar o que você quer do que não quer, o que é bem simples, você pode usar `preg_match_all("texto para ser procurado", $varParaSerInspecionada, $varQueIraGuardarOResultado)` e essa função irá inspecionar a primeira variável `$varParaSerInspecionada` procurando pelo texto `"texto para ser procurado"`, e caso encontre, irá guardar o resultado em `$varQueIraGuardarOResultado`! Caso não encontre o texto que foi específicado, irá guardar na variável `$varQueIraGuardarOResultado` o resultado `false`. Isso ajudou MUITO o Sitio e ajudou a poupar processamento e tempo!
 
 ### Aviso
@@ -37,7 +37,7 @@ Depois disso é necessário utilizar algo para separar o que você quer do que n
 	<h1>✨ Sobre mim</h1>
 </p>
 
-Eu ainda sou uma pessoa indecisa. Não sei se eu realmente eu vou trabalhar com programação. Eu posso realmente estar montando meu futuro e eu não sei, mas eu não ligo, eu gosto muito de programar e sempre quero aprender sobre novas linguagens.<br><br>
+Eu ainda sou uma pessoa indecisa. Não sei se eu realmente vou trabalhar com programação. Eu posso realmente estar montando meu futuro e eu não sei, mas eu não ligo, eu gosto muito de programar e sempre quero aprender sobre novas linguagens.<br><br>
 
 O Projeto Sitio é uma prova disso. Além de preencher o meu tempo, está sendo realmente uma máquina de aprendizado, pois aprendi muito sobre PHP montando esse site, e prentendo aprender mais! De um coletor de conteúdo a um site com Database incluída. Uma grande evolução que eu tive!
 
